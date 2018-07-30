@@ -37,8 +37,18 @@ export default {
 </script>
 
 <style scoped>
+  div {
+    border-right: 2px solid #162a3b;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   li {
-    display: inline-block;
+    flex-direction: row;
     width: 25px;
     height: 25px;
     border: 1px solid #ededed;
@@ -47,6 +57,7 @@ export default {
     vertical-align: middle;
     line-height: 25px;
     color: #162a3b;
+    list-style-type: none;
   }
 
   .full {
