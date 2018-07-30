@@ -2,7 +2,7 @@
   <div>
       <ul>
         <li
-          v-for="(number, index) in total"
+          v-for="(number, index) in (total + 1)"
           :key="index"
           :class="index <= note ? 'full' : ''">
             {{ index }}
@@ -12,17 +12,20 @@
 </template>
 
 <script>
+import { services } from '@/mixins/services'
+
 export default {
   name: 'Note',
-  data () {
-    return {
-      total: 11
-    }
-  },
+  mixins: [services],
   props: {
     note: {
       type: Number,
       required: true
+    }
+  },
+  computed: {
+    total () {
+      return this.responses().maxNote
     }
   },
   methods: {
