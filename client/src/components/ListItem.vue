@@ -1,11 +1,13 @@
 <template>
   <div>
     <p>{{ comment }}</p>
-    <p>{{ note }}</p>
+    <my-note :note="note"/>
   </div>
 </template>
 
 <script>
+import MyNote from '@/components/Note'
+
 export default {
   name: 'ListItem',
   props: {
@@ -17,6 +19,9 @@ export default {
       type: Number,
       required: true
     }
+  },
+  components: {
+    MyNote
   }
 }
 </script>
