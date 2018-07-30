@@ -22,7 +22,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: auto;
+        margin: 0 auto 40px;
         max-width: 1000px;
         border-bottom: 2px solid #162a3b;
     }
