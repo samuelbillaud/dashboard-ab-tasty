@@ -1,11 +1,15 @@
 <template>
   <div class="home">
-      {{ msg }}
+    <header-title :title="applicationTitle"/>
+
+    {{ msg }}
   </div>
 </template>
 
 <script>
 import { services } from '@/mixins/services'
+
+import HeaderTitle from '@/components/HeaderTitle'
 
 export default {
   name: 'Home',
@@ -15,8 +19,16 @@ export default {
       msg: 'Zizou'
     }
   },
+  components: {
+    HeaderTitle
+  },
   mounted () {
     console.log('services.data() : ', this.responses())
+  },
+  computed: {
+    applicationTitle () {
+      return this.responses().title
+    }
   }
 }
 </script>
