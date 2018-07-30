@@ -5,14 +5,20 @@
 </template>
 
 <script>
+import { services } from '@/mixins/services'
+
 export default {
-  name: "Home",
-  data() {
+  name: 'Home',
+  mixins: [services],
+  data () {
     return {
-      msg: "Zizou"
-    };
+      msg: 'Zizou'
+    }
+  },
+  mounted () {
+    console.log('services.data() : ', this.responses())
   }
-};
+}
 </script>
 
 <style scoped>
