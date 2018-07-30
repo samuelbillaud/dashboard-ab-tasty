@@ -11,8 +11,6 @@
         :note="response.note">
       </li>
     </ul>
-
-    {{ msg }}
   </div>
 </template>
 
@@ -25,11 +23,6 @@ import ListItem from '@/components/ListItem'
 export default {
   name: 'Home',
   mixins: [services],
-  data () {
-    return {
-      msg: 'Zizou'
-    }
-  },
   components: {
     HeaderTitle,
     ListItem
