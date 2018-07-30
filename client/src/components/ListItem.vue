@@ -1,7 +1,7 @@
 <template>
   <div>
+    <my-note :note="note" class="note"/>
     <p>{{ comment }}</p>
-    <my-note :note="note"/>
   </div>
 </template>
 
@@ -27,5 +27,20 @@ export default {
 </script>
 
 <style scoped>
+  div {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 30px;
+  }
 
+  .note {
+    padding-right: 30px;
+    margin-right: 30px;
+    align-self: center;
+  }
+
+  p {
+    align-self: center;
+  }
 </style>
