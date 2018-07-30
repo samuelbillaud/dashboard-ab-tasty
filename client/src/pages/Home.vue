@@ -38,11 +38,14 @@ export default {
     console.log('services.data() : ', this.responses())
   },
   computed: {
+    responsesObject () {
+      return this.responses()
+    },
     applicationTitle () {
-      return this.responses().title
+      return this.responsesObject.title
     },
     allResponses () {
-      return this.responses().responses
+      return this.responsesObject.responses
     }
   }
 }
