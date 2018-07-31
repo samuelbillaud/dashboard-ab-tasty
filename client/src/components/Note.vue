@@ -27,11 +27,6 @@ export default {
     total () {
       return this.responses().maxNote
     }
-  },
-  methods: {
-    displayNote () {
-
-    }
   }
 }
 </script>
