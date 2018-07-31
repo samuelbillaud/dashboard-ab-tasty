@@ -25,6 +25,7 @@ export default {
         margin: 0 auto 40px;
         max-width: 1000px;
         border-bottom: 2px solid #162a3b;
+        padding-bottom: 2px;
     }
 
     .logo {
